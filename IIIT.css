@@ -87,9 +87,11 @@ header::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   overflow: hidden;
   position: absolute;
-  background: darkgray;
+  background: rgb(0, 0, 0);
+  /* background-repeat: no-repeat; */
   top: 100%;
   /* width: calc(100% + 15px); */
   width: 0px;
@@ -100,12 +102,25 @@ header::before {
   transition: all 0.3s;
 }
 
+.nav_list_mob_list::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: url(./Images/mo_list_background.jpg) center center/cover;
+  opacity: 0.87;
+}
+
+.nav_list_mob_list ul{
+  margin-bottom: 50%;
+}
+
 .cross {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   margin-right: 110px;
-  margin-bottom: 100px;
   margin-top: 50px;
 }
 
@@ -115,6 +130,10 @@ header::before {
   cursor: pointer;
 }
 
+.cross img{
+  filter: invert(1);
+}
+
 .nav_list_mob_list ul li {
   list-style: none;
   padding: 10px;
@@ -122,8 +141,9 @@ header::before {
 
 .nav_list_mob_list ul li a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 550;
+  color: white;
 }
 
 .header_explore {
